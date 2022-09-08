@@ -30,7 +30,7 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="f660a355-10a8-450e-b44b-41fd19b7d330">
       <console name="course_db" type="STANDARD" schema="oscarval_sql_course" session="Main"><![CDATA[select *
-from imdb_movies
+from city_house_prices
 limit 100]]></console>
     </connection>
   </component>
