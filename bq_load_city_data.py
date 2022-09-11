@@ -8,7 +8,8 @@ target_table = 'bigquery-demo-361613.dataset1.city_housing'
 job_config = bigquery.LoadJobConfig(
     skip_leading_rows=1,
     source_format=bigquery.SourceFormat.CSV,
-    autodetect=True
+    autodetect=True,
+    write_disposition='WRITE_TRUNCATE' # stops duplicate data from being added
 )
 
 # file variables
