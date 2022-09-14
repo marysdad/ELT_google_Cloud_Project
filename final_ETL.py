@@ -34,3 +34,19 @@ group by 1
 
 # extract data
 df = pd.read_sql(sql, connection)
+
+# transform data
+
+
+def year_rating(r):
+    if r <= 5.56:
+        return 'bad movie year'
+    elif r <= 5.9:
+        return 'ok movie year'
+    elif r < 10:
+        return 'good movie year'
+    else:
+        return 'Not rated'
+
+df['year_rating'] = df['avg_rating'].apply(year_rating)
+df.to_csv(load_file, index=False)
